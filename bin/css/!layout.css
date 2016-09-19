@@ -1,0 +1,2458 @@
+/*!
+ * !layout v2.0.0 (https://github.com/johnlucita/Lucita)
+ * Copyright 2015-2016 Lucita, Private.
+ * Licensed under MIT (https://github.com/johnlucita/Lucita/blob/master/LICENSE)
+ */
+@charset "utf-8";
+
+/*————————————————————————————————————————————
+	定义布局全局样式
+————————————————————————————————————————————*/
+
+/**
+ * body标签样式
+ * 
+ */
+body.layout {
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: auto;
+    font-size: 62.5%;
+}
+
+/**
+ * body标签横向滚动条样式
+ * 
+ */
+body.layout[scroll-x="no"], 
+body.layout[scroll="no"] {
+	overflow-x: hidden;
+}
+
+/**
+ * body标签纵向滚动条样式
+ * 
+ */
+body.layout[scroll-y="no"], 
+body.layout[scroll="no"] {
+	overflow-y: hidden;
+}
+
+/**
+ * div标签样式
+ * 
+ */
+body.layout div {
+    position: relative;
+	display: block;
+    margin: 0 auto;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/**
+ * 超文本链接样式
+ * 
+ */
+body.layout a {
+	outline: none;
+}
+
+/**
+ * 图片框样式
+ * 
+ */
+body.layout img {
+	border: 0;
+}
+
+/**
+ * 文本框样式
+ * 
+ */
+body.layout input {
+	line-height: noraml;
+	line-height: 22px\9;
+	vertical-align: middle;
+}
+
+/*
+ * 主框架样式
+ * 
+ */
+body.layout .layout_main {
+    position: relative;
+    min-width: 1024px;
+    width: 100%;
+    min-height: 768px;
+	height: 100%;
+    margin: 0 auto;
+	padding: 0;
+    overflow: hidden;
+}
+
+/**
+ * 文本左对齐样式
+ * 
+ */
+body.layout .layout_textalignleft {
+    text-align: left;
+}
+
+/**
+ * 文本居中对齐样式
+ * 
+ */
+body.layout .layout_textaligncenter {
+    text-align: center;
+}
+
+/**
+ * 文本右对齐样式
+ * 
+ */
+body.layout .layout_textalignright {
+    text-align: right;
+}
+
+/**
+ * 文本两端对齐样式
+ * 
+ */
+body.layout .layout_textalignjustify {
+    text-align: justify;
+    text-justify: inter-ideograph;
+}
+
+/**
+ * 垂直顶线对齐样式
+ * 
+ */
+body.layout .layout_verticalaligntop {
+	vertical-align: top;
+}
+
+/**
+ * 垂直中心线对齐样式
+ * 
+ */
+body.layout .layout_verticalalignmiddle {
+	vertical-align: middle;
+}
+
+/**
+ * 垂直底线对齐样式
+ * 
+ */
+body.layout .layout_verticalalignbottom {
+	vertical-align: bottom;
+}
+
+/**
+ * 垂直基线对齐样式
+ * 
+ */
+body.layout .layout_verticalalignbaseline {
+	vertical-align: baseline;
+}
+
+/**
+ * 次级布局样式
+ * 次级布局横向布局
+ * 
+ */
+body.layout .layout_stump {
+    position: relative;
+    min-width: 1px;
+    min-height: 1px;
+}
+
+/**
+ * 次级布局样式
+ * 次级布局纵向布局（相左靠齐）
+ * 
+ */
+body.layout .layout_piduan {
+    position: relative;
+    min-width: 1px;
+    min-height: 1px;
+    float: left;
+}
+
+/**
+ * 次级布局样式
+ * 次级布局纵向布局（相右靠齐）
+ * 
+ */
+body.layout .layout_piduan[inverse="true"] {
+    float: right;
+}
+
+/**
+ * 次级布局样式
+ * 次级布局漂浮布局
+ * 
+ */
+body.layout .layout_layer {
+    position: absolute;
+    min-width: 1px;
+    min-height: 1px;
+}
+
+/**
+ * 次级布局样式
+ * 次级布局漂浮布局（靠向顶端）
+ * 
+ */
+body.layout .layout_relyontop {
+    top: 0;
+}
+
+/**
+ * 次级布局样式
+ * 次级布局漂浮布局（靠向右侧）
+ * 
+ */
+body.layout .layout_relyonright {
+    right: 0;
+}
+
+/**
+ * 次级布局样式
+ * 次级布局漂浮布局（靠向底端）
+ * 
+ */
+body.layout .layout_relyonbottom {
+    bottom: 0;
+}
+
+/**
+ * 次级布局样式
+ * 次级布局漂浮布局（靠向左侧）
+ * 
+ */
+body.layout .layout_relyonleft {
+    left: 0;
+}
+
+/*
+ * 布局横向授限
+ * 默认最小宽度1024像素
+ * 
+ */
+body.layout .layout_limit_x, 
+body.layout .layout_limit_xy {
+    min-width: 1000px;
+    width: 1000px;
+    max-width: 1000px;
+}
+
+/*
+ * 布局纵向授限
+ * 默认最小高度769像素
+ * 
+ */
+body.layout .layout_limit_y, 
+body.layout .layout_limit_xy {
+    min-height: 750px;
+    height: 750px;
+    max-height: 750px;
+}
+
+/**
+ * 次级布局样式
+ * 次级布局内联布局
+ * 
+ */
+body.layout .layout_inline {
+    display: inline;
+}
+
+/**
+ * 次级布局样式
+ * 次级布局内联块布局
+ * 
+ */
+body.layout .layout_inline_block {
+    display: inline-block;
+}
+
+/**
+ * 次级布局样式
+ * 次级布局表格布局
+ * 
+ */
+body.layout .layout_table {
+    position: relative;
+    display: table;
+}
+
+/**
+ * 次级布局样式
+ * 次级布局表格布局（内联）
+ * 
+ */
+body.layout .layout_table[layout-inline="true"] {
+    display: inline-table;
+}
+
+/**
+ * 次级布局样式
+ * 次级布局表格布局（标题）
+ * 
+ */
+body.layout .layout_table_caption {
+    position: relative;
+    display: table-caption;
+}
+
+/**
+ * 次级布局样式
+ * 次级布局网格布局
+ * 
+ */
+body.layout .layout_grid {
+    position: relative;
+    display: grid;
+}
+
+/**
+ * 次级布局样式
+ * 次级布局网格布局（内联）
+ * 
+ */
+body.layout .layout_grid[layout-inline="true"] {
+    display: inline-grid;
+}
+
+/**
+ * 次级布局样式
+ * 次级布局表格布局（列组样式）
+ * 
+ */
+body.layout .layout_table_columns {
+    position: relative;
+    display: table-column-group;
+}
+
+/**
+ * 次级布局样式
+ * 次级布局表格布局（列样式）
+ * 
+ */
+body.layout .layout_table_column {
+    position: relative;
+    display: table-column;
+}
+
+/**
+ * 次级布局样式
+ * 次级布局表格布局（行样式）
+ * 
+ */
+body.layout .layout_table_row {
+    position: relative;
+    display: table-row;
+}
+
+/**
+ * 次级布局样式
+ * 次级布局表格布局（行组样式）
+ * 
+ */
+body.layout .layout_table_rows {
+    position: relative;
+    display: table-row-group;
+}
+
+/**
+ * 次级布局样式
+ * 次级布局表格布局（头行组样式）
+ * 
+ */
+body.layout .layout_table_header {
+    position: relative;
+    display: table-header-group;
+}
+
+/**
+ * 次级布局样式
+ * 次级布局表格布局（尾行组样式）
+ * 
+ */
+body.layout .layout_table_footer {
+    position: relative;
+    display: table-footer-group;
+}
+
+/**
+ * 次级布局样式
+ * 次级布局表格布局（列样式）
+ * 
+ */
+body.layout .layout_table_cell {
+    position: relative;
+    display: table-cell;
+}
+
+/**
+ * 隐藏布局样式
+ * 
+ */
+body.layout .layout_hidden {
+	display: none!important;
+	*display: none!important;
+	display: none;
+}
+
+/*————————————————————————————————————————————
+	定义布局附加样式
+————————————————————————————————————————————*/
+
+/**
+ * 次级布局附加样式
+ * 隐藏上边框
+ * 
+ */
+body.layout .layout_bordernofull, /* 隐藏（上，右，下，左）边线 */
+body.layout .layout_borderexceptbottom, /* 隐藏（上，右，左）边线 */
+body.layout .layout_borderexceptright, /* 隐藏（上，下，左）边线 */
+body.layout .layout_borderexceptleft, /* 隐藏（上，下，左）边线 */
+body.layout .layout_bordernorighttop, /* 隐藏（上，右）边线 */
+body.layout .layout_bordernotopright, /* 隐藏（上，右）边线 */
+body.layout .layout_bordernolefttop, /* 隐藏（上，左）边线 */
+body.layout .layout_bordernotoopleft, /* 隐藏（上，左）边线 */
+body.layout .layout_bordernobottomtop, /* 隐藏（上，下）边线 */
+body.layout .layout_bordernotopbottom, /* 隐藏（上，下）边线 */
+body.layout .layout_bordernotop {
+	border-top: 1px solid transparent;
+}
+
+/**
+ * 次级布局附加样式
+ * 隐藏右边框
+ * 
+ */
+body.layout .layout_bordernofull, /* 隐藏（上，右，下，左）边线 */
+body.layout .layout_borderexceptbottom, /* 隐藏（上，右，左）边线 */
+body.layout .layout_borderexceptleft, /* 隐藏（上，右，下）边线 */
+body.layout .layout_borderexcepttop, /* 隐藏（右，下，左）边线 */
+body.layout .layout_bordernobottomright, /* 隐藏（右，下）边线 */
+body.layout .layout_bordernorightbottom, /* 隐藏（右，下）边线 */
+body.layout .layout_bordernotopright, /* 隐藏（上，右）边线 */
+body.layout .layout_bordernorighttop, /* 隐藏（上，右）边线 */
+body.layout .layout_bordernoleftright, /* 隐藏（右，左）边线 */
+body.layout .layout_bordernorightleft, /* 隐藏（右，左）边线 */
+body.layout .layout_bordernoright {
+	border-right: 1px solid transparent;
+}
+
+/**
+ * 次级布局附加样式
+ * 隐藏下边框
+ * 
+ */
+body.layout .layout_bordernofull, /* 隐藏（上，右，下，左）边线 */
+body.layout .layout_borderexceptright, /* 隐藏（上，下，左）边线 */
+body.layout .layout_borderexceptleft, /* 隐藏（上，右，下）边线 */
+body.layout .layout_borderexcepttop, /* 隐藏（右，下，左）边线 */
+body.layout .layout_bordernorightbottom, /* 隐藏（右，下）边线 */
+body.layout .layout_bordernobottomright, /* 隐藏（右，下）边线 */
+body.layout .layout_bordernoleftbottom, /* 隐藏（下，左）边线 */
+body.layout .layout_bordernobottomleft, /* 隐藏（下，左）边线 */
+body.layout .layout_bordernotopbottom, /* 隐藏（上，下）边线 */
+body.layout .layout_bordernobottomtop, /* 隐藏（上，下）边线 */
+body.layout .layout_bordernobottom {
+	border-bottom: 1px solid transparent;
+}
+
+/**
+ * 次级布局附加样式
+ * 隐藏左边框
+ * 
+ */
+body.layout .layout_bordernofull, /* 隐藏（上， 右， 下， 左）边线 */
+body.layout .layout_borderexceptbottom, /* 隐藏（上， 右， 左）边线 */
+body.layout .layout_borderexceptright, /* 隐藏（上， 下， 左）边线  */
+body.layout .layout_borderexcepttop, /* 隐藏（右， 下， 左）边线 */
+body.layout .layout_bordernobottomleft, /* 隐藏（下， 左）边线 */
+body.layout .layout_bordernoleftbottom, /* 隐藏（下， 左）边线 */
+body.layout .layout_bordernotopleft, /* 隐藏（上， 左）边线 */
+body.layout .layout_bordernolefttop, /* 隐藏（上， 左）边线 */
+body.layout .layout_bordernorightleft, /* 隐藏（右， 左）边线 */
+body.layout .layout_bordernoleftright, /* 隐藏（右， 左）边线 */
+body.layout .layout_bordernoleft {
+	border-left: 1px solid transparent;
+}
+
+/**
+ * 次级布局附加样式
+ * 距顶0像素
+ * 
+ */
+body.layout .layout_marginnofull, /* 距（上， 右， 下， 左）0像素 */
+body.layout .layout_marginmiddlefull, /* 距（上，下）0像素 */
+body.layout .layout_marginexceptbottom, /* 距（上， 右， 左）0像素 */
+body.layout .layout_marginexceptright, /* 距（上， 下， 左）0像素 */
+body.layout .layout_marginexceptleft, /* 距（上， 右， 下）0像素 */
+body.layout .layout_marginnorighttop, /* 距（上， 右）0像素 */
+body.layout .layout_marginnotopright, /* 距（上， 右）0像素 */
+body.layout .layout_marginnolefttop, /* 距（上， 左）0像素 */
+body.layout .layout_marginnotopleft, /* 距（上， 左）0像素 */
+body.layout .layout_marginnobottomtop, /* 距（上， 下）0像素 */
+body.layout .layout_marginnotopbottom, /* 距（上， 下）0像素 */
+body.layout .layout_marginnotop {
+	margin-top: 0;
+}
+
+/**
+ * 次级布局附加样式
+ * 取消顶端距离
+ * 
+ */
+body.layout .layout_marginautofull, /* 取消（上， 右， 下， 左）距离 */
+body.layout .layout_marginautoexceptbottom, /* 取消（上， 右， 左）距离 */
+body.layout .layout_marginautoexceptright, /* 取消（上， 下， 左）距离 */
+body.layout .layout_marginautoexceptleft, /* 取消（上， 右， 下）距离 */
+body.layout .layout_marginautorighttop, /* 取消（上， 右）距离 */
+body.layout .layout_marginautotopright, /* 取消（上， 右）距离 */
+body.layout .layout_marginautolefttop, /* 取消（上， 左）距离 */
+body.layout .layout_marginautotopleft, /* 取消（上， 左）距离 */
+body.layout .layout_marginautobottomtop, /* 取消（上， 下）距离 */
+body.layout .layout_marginautotopbottom, /* 取消（上， 下）距离 */
+body.layout .layout_marginautotop {
+	margin-top: auto;
+}
+
+/**
+ * 次级布局附加样式
+ * 距右0像素
+ * 
+ */
+body.layout .layout_marginnofull, /* 距（上， 右， 下， 左）0像素 */
+body.layout .layout_marginexceptbottom, /* 距（上， 右， 左）0像素 */
+body.layout .layout_marginexceptleft, /* 距（上， 右， 下）0像素 */
+body.layout .layout_marginexcepttop, /* 距（右， 下， 左）0像素 */
+body.layout .layout_marginnobottomright, /* 距（右， 下）0像素 */
+body.layout .layout_marginnorightbottom, /* 距（右， 下）0像素 */
+body.layout .layout_marginnotopright, /* 距（上， 右）0像素 */
+body.layout .layout_marginnorighttop, /* 距（上， 右）0像素 */
+body.layout .layout_marginnoleftright, /* 距（右， 左）0像素 */
+body.layout .layout_marginnorightleft, /* 距（右， 左）0像素 */
+body.layout .layout_marginnoright {
+	margin-right: 0;
+}
+
+/**
+ * 次级布局附加样式
+ * 取消右侧距离
+ * 
+ */
+body.layout .layout_marginautofull, /* 取消（上， 右， 下， 左）距离 */
+body.layout .layout_marginmiddlefull, /* 取消（左，右）距离 */
+body.layout .layout_marginautoexceptbottom, /* 取消（上， 右， 左）距离 */
+body.layout .layout_marginautoexceptleft, /* 取消（上， 右， 下）距离 */
+body.layout .layout_marginautoexcepttop, /* 取消（右， 下， 左）距离 */
+body.layout .layout_marginautobottomright, /* 取消（右， 下）距离 */
+body.layout .layout_marginautorightbottom, /* 取消（右， 下）距离 */
+body.layout .layout_marginautotopright, /* 取消（上， 右）距离 */
+body.layout .layout_marginautorighttop, /* 取消（上， 右）距离 */
+body.layout .layout_marginautoleftright, /* 取消（右， 左）距离 */
+body.layout .layout_marginautorightleft, /* 取消（右， 左）距离 */
+body.layout .layout_marginautoright {
+	margin-right: auto;
+}
+
+/**
+ * 次级布局附加样式
+ * 距底0像素
+ * 
+ */
+body.layout .layout_marginnofull, /* 距（上， 右， 下， 左）0像素 */
+body.layout .layout_marginmiddlefull, /* 距（上，下）0像素 */
+body.layout .layout_marginexceptright, /* 距（上， 下， 左）0像素 */
+body.layout .layout_marginexceptleft, /* 距（上， 右， 下）0像素 */
+body.layout .layout_marginexcepttop, /* 距（右， 下， 左）0像素 */
+body.layout .layout_marginnorightbottom, /* 距（右， 下）0像素 */
+body.layout .layout_marginnobottomright, /* 距（右， 下）0像素 */
+body.layout .layout_marginnoleftbottom, /* 距（下， 左）0像素 */
+body.layout .layout_marginnobottomleft, /* 距（下， 左）0像素 */
+body.layout .layout_marginnotopbottom, /* 距（上， 下）0像素 */
+body.layout .layout_marginnobottomtop, /* 距（上， 下）0像素 */
+body.layout .layout_marginnobottom {
+	margin-bottom: 0;
+}
+
+/**
+ * 次级布局附加样式
+ * 取消底端距离
+ * 
+ */
+body.layout .layout_marginautofull, /* 取消（上， 右， 下， 左）距离 */
+body.layout .layout_marginautoexceptright, /* 取消（上， 下， 左）距离 */
+body.layout .layout_marginautoexceptleft, /* 取消（上， 右， 下）距离 */
+body.layout .layout_marginautoexcepttop, /* 取消（右， 下， 左）距离 */
+body.layout .layout_marginautorightbottom, /* 取消（右， 下）距离 */
+body.layout .layout_marginautobottomright, /* 取消（右， 下）距离 */
+body.layout .layout_marginautoleftbottom, /* 取消（下， 左）距离 */
+body.layout .layout_marginautobottomleft, /* 取消（下， 左）距离 */
+body.layout .layout_marginautotopbottom, /* 取消（上， 下）距离 */
+body.layout .layout_marginautobottomtop, /* 取消（上， 下）距离 */
+body.layout .layout_marginautobottom {
+	margin-bottom: auto;
+}
+
+/**
+ * 次级布局附加样式
+ * 距左0像素
+ * 
+ */
+body.layout .layout_marginnofull, /* 距（上， 右， 下， 左）0像素 */
+body.layout .layout_marginexceptbottom, /* 距（上， 右， 左）0像素 */
+body.layout .layout_marginexceptright, /* 距（上， 下， 左）0像素 */
+body.layout .layout_marginexcepttop, /* 距（右， 下， 左）0像素 */
+body.layout .layout_marginnobottomleft, /* 距（下， 左）0像素 */
+body.layout .layout_marginnoleftbottom, /* 距（下， 左）0像素 */
+body.layout .layout_marginnotopleft, /* 距（上， 左）0像素 */
+body.layout .layout_marginnolefttop, /* 距（上， 左）0像素 */
+body.layout .layout_marginnorightleft, /* 距（右， 左）0像素 */
+body.layout .layout_marginnoleftright, /* 距（右， 左）0像素 */
+body.layout .layout_marginnoleft {
+	margin-left: 0;
+}
+
+/**
+ * 次级布局附加样式
+ * 取消左侧距离
+ * 
+ */
+body.layout .layout_marginautofull, /* 取消（上， 右， 下， 左）距离 */
+body.layout .layout_marginmiddlefull, /* 取消（左，右）距离 */
+body.layout .layout_marginautoexceptbottom, /* 取消（上， 右， 左）距离 */
+body.layout .layout_marginautoexceptright, /* 取消（上， 下， 左）距离 */
+body.layout .layout_marginautoexcepttop, /* 取消（右， 下， 左）距离 */
+body.layout .layout_marginautobottomleft, /* 取消（下， 左）距离 */
+body.layout .layout_marginautoleftbottom, /* 取消（下， 左）距离 */
+body.layout .layout_marginautotopleft, /* 取消（上， 左）距离 */
+body.layout .layout_marginautolefttop, /* 取消（上， 左）距离 */
+body.layout .layout_marginautorightleft, /* 取消（右， 左）距离 */
+body.layout .layout_marginautoleftright, /* 取消（右， 左）距离 */
+body.layout .layout_marginautoleft {
+	margin-left: auto;
+}
+
+/**
+ * 次级布局附加样式
+ * 没有高度
+ * 
+ */
+body.layout .layout_nowidthheight, /* 没有宽度和高度 */
+body.layout .layout_noheightwidth,  /* 没有高度和宽度 */
+body.layout .layout_noheight {
+	min-height: auto;
+	min-height: 0!important;
+	height: auto;
+	max-height: auto;
+}
+
+/**
+ * 次级布局附加样式
+ * 没有宽度
+ * 
+ */
+body.layout .layout_noheightwidth, /* 没有高度和宽度 */
+body.layout .layout_nowidthheight, /* 没有宽度和高度 */
+body.layout .layout_nowidth {
+	min-width: auto;
+	min-width: 0!important;
+	width: auto;
+	max-width: auto;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（5%）
+ * 
+ */
+body.layout .layout_width_percent_5 {
+	min-width: 3%;
+	width: 3%;
+	max-width: 3%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（5%）
+ * 
+ */
+body.layout .layout_width_percent_5_true {
+	min-width: 5%;
+	width: 5%;
+	max-width: 5%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（5%）
+ * 
+ */
+body.layout .layout_height_percent_5 {
+	min-height: 3%;
+	height: 3%;
+	max-height: 3%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（5%）
+ * 
+ */
+body.layout .layout_height_percent_5_true {
+	min-height: 5%;
+	height: 5%;
+	max-height: 5%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（10%）
+ * 
+ */
+body.layout .layout_width_percent_10 {
+	min-width: 8%;
+	width: 8%;
+	max-width: 8%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（10%）
+ * 
+ */
+body.layout .layout_width_percent_10_true {
+	min-width: 10%;
+	width: 10%;
+	max-width: 10%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（10%）
+ * 
+ */
+body.layout .layout_height_percent_10 {
+	min-height: 8%;
+	height: 8%;
+	max-height: 8%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（10%）
+ * 
+ */
+body.layout .layout_height_percent_10_true {
+	min-height: 10%;
+	height: 10%;
+	max-height: 10%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（15%）
+ * 
+ */
+body.layout .layout_width_percent_15 {
+	min-width: 13%;
+	width: 13%;
+	max-width: 13%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（15%）
+ * 
+ */
+body.layout .layout_width_percent_15_true {
+	min-width: 15%;
+	width: 15%;
+	max-width: 15%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（15%）
+ * 
+ */
+body.layout .layout_height_percent_15 {
+	min-height: 13%;
+	height: 13%;
+	max-height: 13%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（15%）
+ * 
+ */
+body.layout .layout_height_percent_15_true {
+	min-height: 15%;
+	height: 15%;
+	max-height: 15%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（20%）
+ * 
+ */
+body.layout .layout_width_percent_20 {
+	min-width: 18%;
+	width: 18%;
+	max-width: 18%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（20%）
+ * 
+ */
+body.layout .layout_width_percent_20_true {
+	min-width: 20%;
+	width: 20%;
+	max-width: 20%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（20%）
+ * 
+ */
+body.layout .layout_height_percent_20 {
+	min-height: 18%;
+	height: 18%;
+	max-height: 18%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（20%）
+ * 
+ */
+body.layout .layout_height_percent_20_true {
+	min-height: 20%;
+	height: 20%;
+	max-height: 20%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（25%）
+ * 
+ */
+body.layout .layout_width_percent_25 {
+	min-width: 23%;
+	width: 23%;
+	max-width: 23%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（25%）
+ * 
+ */
+body.layout .layout_width_percent_25_true {
+	min-width: 25%;
+	width: 25%;
+	max-width: 25%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（25%）
+ * 
+ */
+body.layout .layout_height_percent_25 {
+	min-height: 23%;
+	height: 23%;
+	max-height: 23%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（25%）
+ * 
+ */
+body.layout .layout_height_percent_25_true {
+	min-height: 25%;
+	height: 25%;
+	max-height: 25%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（30%）
+ * 
+ */
+body.layout .layout_width_percent_30 {
+	min-width: 27%;
+	width: 27%;
+	max-width: 27%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（30%）
+ * 
+ */
+body.layout .layout_width_percent_30_true {
+	min-width: 30%;
+	width: 30%;
+	max-width: 30%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（30%）
+ * 
+ */
+body.layout .layout_height_percent_30 {
+	min-height: 27%;
+	height: 27%;
+	max-height: 27%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（30%）
+ * 
+ */
+body.layout .layout_height_percent_30_true {
+	min-height: 30%;
+	height: 30%;
+	max-height: 30%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（35%）
+ * 
+ */
+body.layout .layout_width_percent_35 {
+	min-width: 32%;
+	width: 32%;
+	max-width: 32%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（35%）
+ * 
+ */
+body.layout .layout_width_percent_35_true {
+	min-width: 35%;
+	width: 35%;
+	max-width: 35%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（35%）
+ * 
+ */
+body.layout .layout_height_percent_35 {
+	min-height: 32%;
+	height: 32%;
+	max-height: 32%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（35%）
+ * 
+ */
+body.layout .layout_height_percent_35_true {
+	min-height: 35%;
+	height: 35%;
+	max-height: 35%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（40%）
+ * 
+ */
+body.layout .layout_width_percent_40 {
+	min-width: 37%;
+	width: 37%;
+	max-width: 37%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（40%）
+ * 
+ */
+body.layout .layout_width_percent_40_true {
+	min-width: 40%;
+	width: 40%;
+	max-width: 40%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（40%）
+ * 
+ */
+body.layout .layout_height_percent_40 {
+	min-height: 37%;
+	height: 37%;
+	max-height: 37%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（40%）
+ * 
+ */
+body.layout .layout_height_percent_40_true {
+	min-height: 40%;
+	height: 40%;
+	max-height: 40%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（45%）
+ * 
+ */
+body.layout .layout_width_percent_45 {
+	min-width: 42%;
+	width: 42%;
+	max-width: 42%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（45%）
+ * 
+ */
+body.layout .layout_width_percent_45_true {
+	min-width: 45%;
+	width: 45%;
+	max-width: 45%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（45%）
+ * 
+ */
+body.layout .layout_height_percent_45 {
+	min-height: 42%;
+	height: 42%;
+	max-height: 42%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（45%）
+ * 
+ */
+body.layout .layout_height_percent_45_true {
+	min-height: 45%;
+	height: 45%;
+	max-height: 45%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（50%）
+ * 
+ */
+body.layout .layout_width_percent_50 {
+	min-width: 47%;
+	width: 47%;
+	max-width: 47%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（50%）
+ * 
+ */
+body.layout .layout_width_percent_50_true {
+	min-width: 50%;
+	width: 50%;
+	max-width: 50%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（50%）
+ * 
+ */
+body.layout .layout_height_percent_50 {
+	min-height: 47%;
+	height: 47%;
+	max-height: 47%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（50%）
+ * 
+ */
+body.layout .layout_height_percent_50_true {
+	min-height: 50%;
+	height: 50%;
+	max-height: 50%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（55%）
+ * 
+ */
+body.layout .layout_width_percent_55 {
+	min-width: 52%;
+	width: 52%;
+	max-width: 52%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（55%）
+ * 
+ */
+body.layout .layout_width_percent_55_true {
+	min-width: 55%;
+	width: 55%;
+	max-width: 55%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（55%）
+ * 
+ */
+body.layout .layout_height_percent_55 {
+	min-height: 52%;
+	height: 52%;
+	max-height: 52%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（55%）
+ * 
+ */
+body.layout .layout_height_percent_55_true {
+	min-height: 55%;
+	height: 55%;
+	max-height: 55%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（60%）
+ * 
+ */
+body.layout .layout_width_percent_60 {
+	min-width: 57%;
+	width: 57%;
+	max-width: 57%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（60%）
+ * 
+ */
+body.layout .layout_width_percent_60_true {
+	min-width: 60%;
+	width: 60%;
+	max-width: 60%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（60%）
+ * 
+ */
+body.layout .layout_height_percent_60 {
+	min-height: 57%;
+	height: 57%;
+	max-height: 57%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（60%）
+ * 
+ */
+body.layout .layout_height_percent_60_true {
+	min-height: 60%;
+	height: 60%;
+	max-height: 60%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（65%）
+ * 
+ */
+body.layout .layout_width_percent_65 {
+	min-width: 62%;
+	width: 62%;
+	max-width: 62%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（65%）
+ * 
+ */
+body.layout .layout_width_percent_65_true {
+	min-width: 65%;
+	width: 65%;
+	max-width: 65%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（65%）
+ * 
+ */
+body.layout .layout_height_percent_65 {
+	min-height: 62%;
+	height: 62%;
+	max-height: 62%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（65%）
+ * 
+ */
+body.layout .layout_height_percent_65_true {
+	min-height: 65%;
+	height: 65%;
+	max-height: 65%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（70%）
+ * 
+ */
+body.layout .layout_width_percent_70 {
+	min-width: 67%;
+	width: 67%;
+	max-width: 67%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（70%）
+ * 
+ */
+body.layout .layout_width_percent_70_true {
+	min-width: 70%;
+	width: 70%;
+	max-width: 70%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（70%）
+ * 
+ */
+body.layout .layout_height_percent_70 {
+	min-height: 67%;
+	height: 67%;
+	max-height: 67%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（70%）
+ * 
+ */
+body.layout .layout_height_percent_70_true {
+	min-height: 70%;
+	height: 70%;
+	max-height: 70%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（75%）
+ * 
+ */
+body.layout .layout_width_percent_75 {
+	min-width: 72%;
+	width: 72%;
+	max-width: 72%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（75%）
+ * 
+ */
+body.layout .layout_width_percent_75_true {
+	min-width: 75%;
+	width: 75%;
+	max-width: 75%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（75%）
+ * 
+ */
+body.layout .layout_height_percent_75 {
+	min-height: 72%;
+	height: 72%;
+	max-height: 72%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（75%）
+ * 
+ */
+body.layout .layout_height_percent_75_true {
+	min-height: 75%;
+	height: 75%;
+	max-height: 75%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（80%）
+ * 
+ */
+body.layout .layout_width_percent_80 {
+	min-width: 77%;
+	width: 77%;
+	max-width: 77%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（80%）
+ * 
+ */
+body.layout .layout_width_percent_80_true {
+	min-width: 80%;
+	width: 80%;
+	max-width: 80%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（80%）
+ * 
+ */
+body.layout .layout_height_percent_80 {
+	min-height: 77%;
+	height: 77%;
+	max-height: 77%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（80%）
+ * 
+ */
+body.layout .layout_height_percent_80_true {
+	min-height: 80%;
+	height: 80%;
+	max-height: 80%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（85%）
+ * 
+ */
+body.layout .layout_width_percent_85 {
+	min-width: 83%;
+	width: 83%;
+	max-width: 83%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（85%）
+ * 
+ */
+body.layout .layout_width_percent_85_true {
+	min-width: 85%;
+	width: 85%;
+	max-width: 85%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（85%）
+ * 
+ */
+body.layout .layout_height_percent_85 {
+	min-height: 83%;
+	height: 83%;
+	max-height: 83%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（85%）
+ * 
+ */
+body.layout .layout_height_percent_85_true {
+	min-height: 85%;
+	height: 85%;
+	max-height: 85%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（90%）
+ * 
+ */
+body.layout .layout_width_percent_90 {
+	min-width: 87%;
+	width: 87%;
+	max-width: 87%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（90%）
+ * 
+ */
+body.layout .layout_width_percent_90_true {
+	min-width: 90%;
+	width: 90%;
+	max-width: 90%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（90%）
+ * 
+ */
+body.layout .layout_height_percent_90 {
+	min-height: 87%;
+	height: 87%;
+	max-height: 87%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（90%）
+ * 
+ */
+body.layout .layout_height_percent_90_true {
+	min-height: 90%;
+	height: 90%;
+	max-height: 90%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（95%）
+ * 
+ */
+body.layout .layout_width_percent_95 {
+	min-width: 92%;
+	width: 92%;
+	max-width: 92%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（95%）
+ * 
+ */
+body.layout .layout_width_percent_95_true {
+	min-width: 95%;
+	width: 95%;
+	max-width: 95%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（95%）
+ * 
+ */
+body.layout .layout_height_percent_95 {
+	min-height: 92%;
+	height: 92%;
+	max-height: 92%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（95%）
+ * 
+ */
+body.layout .layout_height_percent_95_true {
+	min-height: 95%;
+	height: 95%;
+	max-height: 95%;
+}
+
+/**
+ * 次级布局附加样式
+ * 宽度百分比（100%）
+ * 
+ */
+body.layout .layout_width_percent_100 {
+	min-width: 98%;
+	width: 98%;
+	max-width: 98%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分比（100%）
+ * 
+ */
+body.layout .layout_height_percent_100 {
+	min-height: 98%;
+	height: 98%;
+	max-height: 98%;
+}
+
+
+/**
+ * 次级布局附加样式
+ * 宽度百分百
+ * 
+ */
+body.layout .layout_width_hundred_percent, 
+body.layout .layout_width_percent_100_true {
+	clear: both;
+	min-width: 100%;
+	width: 100%;
+	max-width: 100%;
+}
+
+/**
+ * 次级布局附加样式
+ * 高度百分百
+ * 
+ */
+body.layout .layout_height_hundred_percent, 
+body.layout .layout_height_percent_100_true {
+	clear: both;
+	min-height: 100%;
+	height: 100%;
+	max-height: 100%;
+	line-height: 100%;
+}
+
+/**
+ * 次级布局附加样式
+ * 取消顶端内边距
+ *
+ */
+body.layout .layout_nopadding, 
+body.layout .layout_nopaddingtop {
+	padding-top: 0;
+}
+
+/**
+ * 次级布局附加样式
+ * 取消右侧内边距
+ *
+ */
+body.layout .layout_nopadding, 
+body.layout .layout_nopaddingright {
+	padding-right: 0;
+}
+
+/**
+ * 次级布局附加样式
+ * 取消底端内边距
+ *
+ */
+body.layout .layout_nopadding, 
+body.layout .layout_nopaddingbottom {
+	padding-bottom: 0;
+}
+
+/**
+ * 次级布局附加样式
+ * 取消左侧内边距
+ *
+ */
+body.layout .layout_nopadding, 
+body.layout .layout_nopaddingleft {
+	padding-left: 0;
+}
+
+/**
+ * 次级布局附加样式
+ * 分隔线样式
+ * 
+ */
+body.layout .layout_divider {
+	clear: both;
+	width: auto;
+	min-height: 1px;
+	height: 1px;
+	max-height: 1px;
+	text-indent: -1000px;
+    margin: 14px auto 15px auto;
+	overflow: hidden;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+	border-color: black;
+}
+
+/**
+ * 次级布局附加样式
+ * 半透明样式
+ * 
+ */
+body.layout .layout_translucent {
+    filter: alpha(Opacity=50);  /*IE*/
+    -moz-opacity: 0.5;          /*FF*/
+    opacity: 0.5;               /*GG*/
+}
+
+/**
+ * 次级布局附加样式
+ * 布局横行可视
+ * 
+ */
+body.layout .layout_overflowvisible_x, 
+body.layout .layout_overflowvisible {
+	overflow-x: visible;
+}
+
+/**
+ * 次级布局附加样式
+ * 布局纵列可视
+ * 
+ */
+body.layout .layout_overflowvisible_y, 
+body.layout .layout_overflowvisible {
+	overflow-y: visible;
+}
+
+/**
+ * 次级布局附加样式
+ * 布局横行隐藏
+ * 
+ */
+body.layout .layout_overflowhidden_x, 
+body.layout .layout_overflowhidden {
+	overflow-x: hidden;
+}
+
+/**
+ * 次级布局附加样式
+ * 布局纵列隐藏
+ * 
+ */
+body.layout .layout_overflowhidden_y, 
+body.layout .layout_overflowhidden {
+	overflow-y: hidden;
+}
+
+/**
+ * 次级布局附加样式
+ * 布局边框
+ * 
+ */
+body.layout .layout_border {
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+}
+
+/**
+ * 次级布局附加样式
+ * 布局容器（自定义）
+ * 
+ */
+body.layout .layout_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/**
+ * 次级布局附加样式
+ * 布局宽度（自定义）
+ * 
+ */
+body.layout .layout_width {
+    width: 100%;
+    display: none!important;
+	*display: none!important;
+	display: none;
+}
+
+/**
+ * 次级布局附加样式
+ * 布局高度（自定义）
+ * 
+ */
+body.layout .layout_height {
+    height: 100%;
+}
+
+/**
+ * 次级布局附加样式
+ * 布局图形
+ * 
+ */
+body.layout .layout_pattern {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    z-index: 10;
+}
+
+/*————————————————————————————————————————————
+	定义布局外观样式
+————————————————————————————————————————————*/
+
+/**
+ * 布局外观样式
+ * 
+ */
+body.layout_display {
+
+}
+
+/**
+ * 布局外观样式
+ * 显示边框
+ * 
+ */
+body.layout_display .layout_border {
+    border-width: 1px;
+    border-style: dashed;
+    border-color: crimson;
+}
+
+/**
+ * 布局外观样式
+ * 显示背景
+ * 
+ */
+body.layout_display .layout_backgroundcolor {
+	background-color: #afafaf;
+}
+
+/**
+ * 布局外观样式
+ * 隐藏边框
+ * 
+ */
+body.layout_display_none .layout_border {
+    border: 0;
+}
+
+/**
+ * 布局外观样式
+ * 透明背景色
+ * 
+ */
+body.layout_display_none .layout_backgroundcolor {
+	background-color: transparent;
+}
+
+/*————————————————————————————————————————————
+	定义布局字体样式
+————————————————————————————————————————————*/
+
+/**
+ * 布局字体样式
+ * 
+ */
+body.layout_fonts {
+    font-size: 16px;
+}
+
+/*————————————————————————————————————————————
+	定义布局组件样式
+————————————————————————————————————————————*/
+
+/**
+ * 布局组件样式
+ * 主标识
+ * 
+ */
+body.layout_controls {
+    
+}
+
+/**
+ * 布局组件样式
+ * 按钮样式
+ * 
+ */
+body.layout_controls .layout_button {
+    text-align: center;
+    font: bold 1.5em 'Trebuchet MS', Arial, Helvetica;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid #9c9c9c;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.4);
+    box-shadow: 0 0 .05em rgba(0,0,0,0.4);
+    -moz-box-shadow: 0 0 .05em rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0 0 .05em rgba(0,0,0,0.4);
+}
+
+/**
+ * 布局组件样式
+ * 按钮圆角样式
+ * 
+ */
+body.layout_controls .layout_button, 
+body.layout_controls .layout_button span {
+    -moz-border-radius: 0.3em;
+    border-radius: 0.3em;
+}
+
+/**
+ * 布局组件样式
+ * 按钮内容样式（适中尺寸）
+ * 
+ */
+body.layout_controls .layout_button span {
+    border-top: 1px solid #fff;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    display: block;
+    padding: 0.3em 1.5em;
+    background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, rgba(0, 0, 0, 0.05)), color-stop(.25, transparent), to(transparent)), -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, rgba(0, 0, 0, 0.05)), color-stop(.25, transparent), to(transparent)), -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.75, transparent), color-stop(.75, rgba(0, 0, 0, 0.05))), -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.75, transparent), color-stop(.75, rgba(0, 0, 0, 0.05)));
+    background-image: -moz-linear-gradient(45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent), -moz-linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent), -moz-linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, 0.05) 75%), -moz-linear-gradient(-45deg, transparent 75%, rgba(0, 0, 0, 0.05) 75%);
+    -moz-background-size: 3px 3px;
+    -webkit-background-size: 3px 3px;
+    background-size: 3px 3px;
+}
+
+/**
+ * 布局组件样式
+ * 按钮内容样式（最小尺寸）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_xsm span {
+    padding: 0.1em 0.5em;
+}
+
+/**
+ * 布局组件样式
+ * 按钮内容样式（小尺寸）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_sm span {
+    padding: 0.2em 1.0em;
+}
+
+/**
+ * 布局组件样式
+ * 按钮内容样式（大尺寸）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_lg span {
+    padding: 0.4em 2.0em;
+}
+
+/**
+ * 布局组件样式
+ * 按钮内容样式（最大尺寸）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_xlg span {
+    padding: 0.5em 2.5em;
+}
+
+/**
+ * 布局组件样式
+ * 按钮划过样式
+ * 
+ */
+body.layout_controls .layout_button:hover {
+    box-shadow: 0 0 .1em rgba(0,0,0,0.4);
+    -moz-box-shadow: 0 0 .1em rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0 0 .1em rgba(0,0,0,0.4);
+}
+
+/**
+ * 布局组件样式
+ * 按钮激活样式
+ * 
+ */
+body.layout_controls .layout_button:active {
+    position: relative;
+    top: 1px;
+}
+
+/**
+ * 布局组件样式
+ * 按钮颜色样式（卡其色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_khaki {
+    background: #A2B598;
+    background: -webkit-gradient(linear, left top, left bottom, from(#BDD1B4), to(#A2B598) );
+    background: -moz-linear-gradient(-90deg, #BDD1B4, #A2B598);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#BDD1B4', EndColorStr='#A2B598');
+}
+
+/**
+ * 布局组件样式
+ * 按钮划过颜色样式（卡其色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_khaki:hover {
+    background: #BDD1B4;
+    background: -webkit-gradient(linear, left top, left bottom, from(#A2B598), to(#BDD1B4) );
+    background: -moz-linear-gradient(-90deg, #A2B598, #BDD1B4);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#A2B598', EndColorStr='#BDD1B4');
+}
+
+/**
+ * 布局组件样式
+ * 按钮激活颜色样式（卡其色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_khaki:active {
+    background: #A2B598;
+}
+
+/**
+ * 布局组件样式
+ * 按钮颜色样式（蓝色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_blue {
+    background: #4477a1;
+    background: -webkit-gradient(linear, left top, left bottom, from(#81a8cb), to(#4477a1) );
+    background: -moz-linear-gradient(-90deg, #81a8cb, #4477a1);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#81a8cb', endColorstr='#4477a1');
+}
+
+/**
+ * 布局组件样式
+ * 按钮划过颜色样式（蓝色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_blue:hover {
+    background: #81a8cb;
+    background: -webkit-gradient(linear, left top, left bottom, from(#4477a1), to(#81a8cb) );
+    background: -moz-linear-gradient(-90deg, #4477a1, #81a8cb);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4477a1', endColorstr='#81a8cb');
+}
+
+/**
+ * 布局组件样式
+ * 按钮激活颜色样式（蓝色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_blue:active {
+    background: #4477a1;
+}
+
+/**
+ * 布局组件样式
+ * 按钮颜色样式（棕色、褐色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_brown {
+    background: #8f3714;
+    background: -webkit-gradient(linear, left top, left bottom, from(#bf6f50), to(#8f3714) );
+    background: -moz-linear-gradient(-90deg, #bf6f50, #8f3714);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#bf6f50', EndColorStr='#8f3714');
+}
+
+/**
+ * 布局组件样式
+ * 按钮划过颜色样式（棕色、褐色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_brown:hover {
+    background: #bf6f50;
+    background: -webkit-gradient(linear, left top, left bottom, from(#8f3714), to(#bf6f50) );
+    background: -moz-linear-gradient(-90deg, #8f3714, #bf6f50);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#8f3714', EndColorStr='#bf6f50');
+}
+
+/**
+ * 布局组件样式
+ * 按钮激活颜色样式（棕色、褐色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_brown:active {
+    background: #8f3714;
+}
+
+/**
+ * 布局组件样式
+ * 按钮颜色样式（绿色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_green {
+    background: #428739;
+    background: -webkit-gradient(linear, left top, left bottom, from(#c8dd95), to(#428739) );
+    background: -moz-linear-gradient(-90deg, #c8dd95, #428739);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#c8dd95', EndColorStr='#428739');
+}
+
+/**
+ * 布局组件样式
+ * 按钮划过颜色样式（绿色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_green:hover {
+    background: #c8dd95;
+    background: -webkit-gradient(linear, left top, left bottom, from(#428739), to(#c8dd95) );
+    background: -moz-linear-gradient(-90deg, #428739, #c8dd95);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#428739', EndColorStr='#c8dd95');
+}
+
+/**
+ * 布局组件样式
+ * 按钮激活颜色样式（绿色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_green:active {
+    background: #428739;
+}
+
+/**
+ * 布局组件样式
+ * 按钮颜色样式（红色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_red {
+    background: #D82741;
+    background: -webkit-gradient(linear, left top, left bottom, from(#E84B6E), to(#D82741) );
+    background: -moz-linear-gradient(-90deg, #E84B6E, #D82741);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#E84B6E', EndColorStr='#D82741');
+}
+
+/**
+ * 布局组件样式
+ * 按钮划过颜色样式（红色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_red:hover {
+    background: #E84B6E;
+    background: -webkit-gradient(linear, left top, left bottom, from(#D82741), to(#E84B6E) );
+    background: -moz-linear-gradient(-90deg, #D82741, #E84B6E);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#D82741', EndColorStr='#E84B6E');
+}
+
+/**
+ * 布局组件样式
+ * 按钮激活颜色样式（红色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_red:active {
+    background: #D82741;
+}
+
+/**
+ * 布局组件样式
+ * 按钮颜色样式（紫色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_purple {
+    background: #6F50E7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#B8A9F3), to(#6F50E7) );
+    background: -moz-linear-gradient(-90deg, #B8A9F3, #6F50E7);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#B8A9F3', EndColorStr='#6F50E7');
+}
+
+/**
+ * 布局组件样式
+ * 按钮划过颜色样式（紫色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_purple:hover {
+    background: #B8A9F3;
+    background: -webkit-gradient(linear, left top, left bottom, from(#6F50E7), to(#B8A9F3) );
+    background: -moz-linear-gradient(-90deg, #6F50E7, #B8A9F3);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#6F50E7', EndColorStr='#B8A9F3');
+}
+
+/**
+ * 布局组件样式
+ * 按钮激活颜色样式（紫色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_purple:active {
+    background: #6F50E7;
+}
+
+/**
+ * 布局组件样式
+ * 按钮颜色样式（黑色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_black {
+    background: #141414;
+    background: -webkit-gradient(linear, left top, left bottom, from(#656565), to(#141414) );
+    background: -moz-linear-gradient(-90deg, #656565, #141414);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#656565', EndColorStr='#141414');
+}
+
+/**
+ * 布局组件样式
+ * 按钮划过颜色样式（黑色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_black:hover {
+    background: #656565;
+    background: -webkit-gradient(linear, left top, left bottom, from(#141414), to(#656565) );
+    background: -moz-linear-gradient(-90deg, #141414, #656565);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#141414', EndColorStr='#656565');
+}
+
+/**
+ * 布局组件样式
+ * 按钮激活颜色样式（黑色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_black:active {
+    background: #141414;
+}
+
+/**
+ * 布局组件样式
+ * 按钮颜色样式（橘色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_orange {
+    background: #f09c15;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f8c939), to(#f09c15) );
+    background: -moz-linear-gradient(-90deg, #f8c939, #f09c15);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#f8c939', EndColorStr='#f09c15');
+}
+
+/**
+ * 布局组件样式
+ * 按钮划过颜色样式（橘色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_orange:hover {
+    background: #f8c939;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f09c15), to(#f8c939) );
+    background: -moz-linear-gradient(-90deg, #f09c15, #f8c939);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#f09c15', EndColorStr='#f8c939');
+}
+
+/**
+ * 布局组件样式
+ * 按钮激活颜色样式（橘色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_orange:active {
+    background: #f09c15;
+}
+
+/**
+ * 布局组件样式
+ * 按钮颜色样式（银色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_silver {
+    background: #c5c5c5;
+    background: -webkit-gradient(linear, left top, left bottom, from(#eaeaea), to(#c5c5c5) );
+    background: -moz-linear-gradient(-90deg, #eaeaea, #c5c5c5);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#eaeaea', EndColorStr='#c5c5c5');
+}
+
+/**
+ * 布局组件样式
+ * 按钮划过颜色样式（银色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_silver:hover {
+    background: #eaeaea;
+    background: -webkit-gradient(linear, left top, left bottom, from(#c5c5c5), to(#eaeaea) );
+    background: -moz-linear-gradient(-90deg, #c5c5c5, #eaeaea);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#c5c5c5', EndColorStr='#eaeaea');
+}
+
+/**
+ * 布局组件样式
+ * 按钮激活颜色样式（银色）
+ * 
+ */
+body.layout_controls .layout_button.layout_button_silver:active {
+    background: #c5c5c5;
+}
+
+/**
+ * 布局组件样式
+ * 链接按钮样式
+ * 
+ */
+body.layout_controls .layout_link_button {
+	text-align: center;
+	padding: 2px 2px 2px 0;
+}
+
+/**
+ * 布局组件样式
+ * 链接按钮样式——划过样式
+ * 
+ */
+body.layout_controls .layout_link_button[altfocus="true"]:hover {
+	outline: 1px groove #aaa;
+    -moz-outline-radius: 5px;
+	box-shadow: 0 0 .1em rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0 0 .1em rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 0 0 .1em rgba(0, 0, 0, 0.4);
+}
+
+/**
+ * 布局组件样式
+ * 标签样式
+ * 
+ */
+body.layout_controls .layout_tabs {
+    min-height: 28px;
+}
+
+/**
+ * 布局组件样式
+ * 标签样式——导航标签
+ * 
+ */
+body.layout_controls .layout_tabs .layout_nav_tabs {
+    min-height: 26px;
+    border-bottom: 1px solid #dddddd;
+}
+
+/**
+ * 布局组件样式
+ * 标签样式——导航标签项
+ * 
+ */
+body.layout_controls .layout_tabs .layout_nav_tabs > li {
+    min-height: 24px;
+    float: left;
+    margin-bottom: -1px;
+    background-color: transparent!important;
+}
+
+/**
+ * 布局组件样式
+ * 标签样式——导航标签项链接
+ * 
+ */
+body.layout_controls .layout_tabs .layout_nav_tabs > li > a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    padding: 6px;
+}
+
+/**
+ * 布局组件样式
+ * 标签样式——导航标签项链接划过
+ * 
+ */
+body.layout_controls .layout_tabs .layout_nav_tabs > li > a:hover, 
+body.layout_controls .layout_tabs .layout_nav_tabs > li > a:active {
+    border-color: #eeeeee #eeeeee #dddddd;
+}
+
+/**
+ * 布局组件样式
+ * 标签样式——导航标签项链接激活
+ * 
+ */
+body.layout_controls .layout_tabs .layout_nav_tabs > li.layout_active > a, 
+body.layout_controls .layout_tabs .layout_nav_tabs > li.layout_active > a:hover, 
+body.layout_controls .layout_tabs .layout_nav_tabs > li.layout_active > a:focus {
+    color: #555;
+    cursor: default;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-bottom-color: transparent;
+}
+
+/**
+ * 布局组件样式
+ * 标签样式——标签体
+ * 
+ */
+body.layout_controls .layout_content {
+    min-height: 74px;
+}
+
+/**
+ * 布局组件样式
+ * 标签样式——标签体内容
+ * 
+ */
+body.layout_controls .layout_content > * {
+    display: none;
+    padding: 10px;
+    min-height: 72px;
+}
+
+/**
+ * 布局组件样式
+ * 标签样式——标签体内容激活
+ * 
+ */
+body.layout_controls .layout_content > *.layout_active {
+    display: block;
+}
+
+/**
+ * 布局组件样式
+ * 搜索框样式
+ * 
+ */
+body.layout_controls .layout_searchbox {
+	min-height: 24px;
+}
+
+/**
+ * 布局组件样式
+ * 搜索框样式——搜索元素
+ * 
+ */
+body.layout_controls .layout_searchbox > * {
+	min-height: 22px;
+	display: inline-block;
+}
+
+/**
+ * 布局组件样式
+ * 搜索框样式——搜索框
+ * 
+ */
+body.layout_controls .layout_searchbox > input[type="text"] {
+    min-width: 200px;
+	border-radius: 5px;
+	background: white url('./images/magnifying-class.png') no-repeat scroll 4px center;
+}
+
+/**
+ * 布局组件样式
+ * 搜索框样式——搜索框获得焦点
+ * 
+ */
+body.layout_controls .layout_searchbox > input[type="text"][altfocus="true"]:focus {
+    border: 2px solid #666;
+	background-color: #eee;
+}
+
+/**
+ * 布局组件样式
+ * 搜索框样式——搜索按钮
+ * 
+ */
+body.layout_controls .layout_searchbox > a {
+    position: absolute;
+    min-height: 18px;
+	top: 0;
+	right: 5px;
+	z-index: 23;
+	vertical-align: baseline;
+}
+
+/**
+ * 布局组件样式
+ * 搜索框样式（IE）
+ * 
+ */
+body.layout_controls .layout_searchbox > div.searchIE {
+    min-height: 22px;
+    line-height: 22px;
+    border-radius: 5px;
+    border-top: 2px outset #000;
+    border-right: 2px inset #fff;
+    border-bottom: 2px inset #fff;
+    border-left: 2px outset #000;
+    background-color: #fff;
+}
+
+/**
+ * 布局组件样式
+ * 标签样式（IE）——标签体内容
+ * 
+ */
+body.layout_controls .layout_searchbox > div.searchIE> * {
+    float: left;
+    min-height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+/**
+ * 布局组件样式
+ * 标签样式（IE）——搜索图标
+ * 
+ */
+body.layout_controls .layout_searchbox > div.searchIE > span.fa-search {
+    min-width: 25px;
+	width: 25px;
+	max-width: 25px;
+	min-height: 24px;
+	line-height: 24px;
+	padding-left: 5px;
+}
+
+/**
+ * 布局组件样式
+ * 标签样式（IE）——搜索框
+ * 
+ */
+body.layout_controls .layout_searchbox > div.searchIE > input[type="text"] {
+    border: 0;
+    margin-top: 2px;
+    min-width: 200px;
+	border-radius: 5px;
+}
+
+/**
+ * 布局组件样式
+ * 标签样式（IE）——搜索框划过
+ * 
+ */
+body.layout_controls .layout_searchbox > div.searchIE.altfocus {
+    border: 2px solid #666;
+    background-color: #eee;
+}
+
+body.layout_controls .layout_searchbox > div.searchIE.altfocus > input[type="text"] {
+    background-color: #eee;
+}
+
+/**
+ * 布局组件样式
+ * 标签样式（IE）——搜索按钮
+ * 
+ */
+body.layout_controls .layout_searchbox > div.searchIE > a {
+    line-height: 24px;
+    padding-right: 2px;
+	vertical-align: baseline;
+}

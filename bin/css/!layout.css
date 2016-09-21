@@ -2456,3 +2456,129 @@ body.layout_controls .layout_searchbox > div.searchIE > a {
     padding-right: 2px;
 	vertical-align: baseline;
 }
+
+/**
+ * 布局组件样式
+ * 下拉菜单样式
+ * 
+ */
+body.layout_controls .layout_dropdown_menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+
+/**
+ * 布局组件样式
+ * 下拉菜单样式——靠左
+ * 
+ */
+body.layout_controls .layout_dropdown_menu.layout_dropdown_menu_left {
+    right: auto;
+    left: 0;
+}
+
+/**
+ * 布局组件样式
+ * 下拉菜单样式——靠右
+ * 
+ */
+body.layout_controls .layout_dropdown_menu.layout_dropdown_menu_right {
+    right: 0;
+    left: auto;
+}
+
+/**
+ * 布局组件样式
+ * 下拉菜单样式——分隔线
+ * 
+ */
+body.layout_controls .layout_dropdown_menu .layout_divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #e5e5e5;
+}
+
+/**
+ * 布局组件样式
+ * 下拉菜单样式——菜单项
+ * 
+ */
+body.layout_controls .layout_dropdown_menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+
+/**
+ * 布局组件样式
+ * 下拉菜单样式——菜单项划过或者获得焦点
+ * 
+ */
+body.layout_controls .layout_dropdown_menu > li > a:hover, 
+body.layout_controls .layout_dropdown_menu > li > a:focus {
+    color: #262626;
+    text-decoration: none;
+    background-color: #f5f5f5;
+}
+
+/**
+ * 布局组件样式
+ * 下拉菜单样式——菜单项（活动）划过或者获得焦点
+ * 
+ */
+body.layout_controls .layout_dropdown_menu > .layout_active > a, 
+body.layout_controls .layout_dropdown_menu > .layout_active > a:hover, 
+body.layout_controls .layout_dropdown_menu > .layout_active > a:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #337ab7;
+    outline: 0;
+}
+
+/**
+ * 布局组件样式
+ * 下拉菜单样式——菜单项（禁用）划过或者获得焦点
+ * 
+ */
+body.layout_controls .layout_dropdown_menu > .layout_disabled > a, 
+body.layout_controls .layout_dropdown_menu > .layout_disabled > a:hover, 
+body.layout_controls .layout_dropdown_menu > .layout_disabled > a:focus {
+    color: #777;
+}
+
+/**
+ * 布局组件样式
+ * 下拉菜单样式——菜单项（禁用）划过或者获得焦点
+ * 
+ */
+body.layout_controls .layout_dropdown_menu > .layout_disabled > a:hover, 
+body.layout_controls .layout_dropdown_menu > .layout_disabled > a:focus {
+    text-decoration: none;
+    cursor: not-allowed;
+    background-color: transparent;
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}

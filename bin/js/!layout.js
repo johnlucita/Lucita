@@ -127,11 +127,11 @@ $.fn.extend({
                 if ('%' == _unit) {
                     _width = parseInt(_space * _width / 100);
                     _unit = 'px';
-                }
 
-                // 自定义宽度大于容器宽度时，等于容器内部宽度
-                if (_width > _space) {
-                    _width = _space;
+                    // 自定义宽度大于容器宽度时，等于容器内部宽度
+                    if (_width > _space) {
+                        _width = _space;
+                    }
                 }
 
                 // 设置目标总宽度（包括margin、border、padding宽度）
@@ -184,6 +184,7 @@ var layout = {
         layout.initLayoutPattern();
         layout.initLayoutTabs();
         layout.initLayoutSearchbox();
+        layout.initDropdownMenu();
 
         return false;
     }, 
@@ -354,6 +355,55 @@ var layout = {
 
                         _$searchTxt.css('padding-left', '25px');
                         _$searchTxt.css('padding-right', (_btnWidth + 5) + 'px');
+                    }
+                }
+            });
+        }
+    }, 
+    initDropdownMenu: function() {
+        var _$dropdownmenus = $('.layout_dropdown_menu');
+
+        if (_$dropdownmenus.length) {
+            $.each(_$dropdownmenus, function (i, dropdownmenu) {
+                var _$dropdownmenu = $(dropdownmenu);
+                
+                // 获取触发元素
+                if (_$dropdownmenu.hasAttr('data-labelledby')) {
+                    var _$trigger = $('#' + _$dropdownmenu.attr('data-labelledby'));
+
+                    if (_$trigger.length) {
+                        var _expansion = function () {
+                            _$trigger.attr('data-expanded', 'true');
+                            _$dropdownmenu.show();
+                        }, _contraction = function () {
+                            _$trigger.attr('data-expanded', 'false');
+                            _$dropdownmenu.hide();
+                        };
+                        // 绑定菜单单击事件
+                        _$trigger.unbind('click').on('click', function (e) {
+                            var _e = getEvent(e);
+
+                            if (_e.stopPropagation) {
+                                _e.stopPropagation();
+                            } else {
+                                _e.cancelBubble = true;
+                            }
+
+                            if (_$trigger.hasAttr('data-expanded')
+                                && _$trigger.attr('data-expanded').toUpperCase() == 'TRUE') {
+                                // 展开状态下
+                                _contraction()
+                            } else {
+                                // 关闭状态下
+                                _expansion();
+                            }
+
+                            return false;
+                        });
+                        // 绑定文档单击事件
+                        $(document).on('click', function () {
+                            _contraction();
+                        });
                     }
                 }
             });
